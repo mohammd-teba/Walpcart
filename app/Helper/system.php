@@ -91,15 +91,6 @@ function admin_subscriptions_management_vw()
     return admin_vw() . '.subscriptions_management';
 }
 
-function admin_constants_url()
-{
-    return 'admin/constants';
-}
-
-function admin_constants_vw()
-{
-    return 'admin.constants';
-}
 
 function admin_home_url()
 {
@@ -117,15 +108,28 @@ function admin_users_url()
     return admin_vw() . '/users';
 }
 
-function admin_settings_vw()
+
+function admin_services_vw()
 {
-    return admin_vw() . '.settings';
+    return admin_vw() . '.services';
 }
 
-function admin_settings_url()
+function admin_services_url()
 {
-    return admin_vw() . '/settings';
+    return admin_vw() . '/services';
 }
+
+function admin_products_vw()
+{
+    return admin_vw() . '.products';
+}
+
+
+function admin_products_url()
+{
+    return admin_vw() . '/products';
+}
+
 
 
 function admin_roles_url()
@@ -167,54 +171,6 @@ function loader_icon()
 function user_vw()
 {
     return 'user';
-}
-
-
-
-function admin_sectors_url()
-{
-    return 'admin/sectors';
-}
-
-function admin_sectors_vw()
-{
-    return 'admin.sectors';
-}
-function admin_categories_url()
-{
-    return 'admin/categories';
-}
-
-function admin_categories_vw()
-{
-    return 'admin.categories';
-}
-function admin_managerMessages_url()
-{
-    return 'admin/managerMessages';
-}
-
-function admin_managerMessages_vw()
-{
-    return 'admin.managerMessages';
-}
-function admin_teams_url()
-{
-    return 'admin/teams';
-}
-
-function admin_teams_vw()
-{
-    return 'admin.teams';
-}
-function admin_projects_url()
-{
-    return 'admin/projects';
-}
-
-function admin_projects_vw()
-{
-    return 'admin.projects';
 }
 
 

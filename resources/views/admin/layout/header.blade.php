@@ -16,9 +16,8 @@
     margin-top: 4px;
     text-align: center;
     width: 87%;">
-                <img src="{{url('/')}}/assets/website/assets/images/logoFooter.png" alt="logo" class="logo-default"
-{{--                <img src="{{url('assets')}}/logo.png" alt="logo" class="logo-default"--}}
-                     style="width: 75%;margin-top: 2px;"/> </a>
+{{--                <img src="{{url('/')}}/assets/website/assets/images/logoFooter.png" alt="logo" class="logo-default"--}}
+{{--                     style="width: 75%;margin-top: 2px;"/> </a>--}}
             <div class="menu-toggler sidebar-toggler">
                 <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
             </div>

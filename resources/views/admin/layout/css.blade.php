@@ -28,7 +28,7 @@
 <link href="{{url(assets('admin'))}}/layouts/layout2/css/custom.min.css" rel="stylesheet" type="text/css"/>
 <!-- END THEME LAYOUT STYLES -->
 {{--<link rel="shortcut icon" href="favicon.ico" />--}}
-<link rel="shortcut icon" href="{{url('/')}}/assets/website/assets/images/logo.png">
+{{--<link rel="shortcut icon" href="{{url('/')}}/assets/website/assets/images/logo.png">--}}
 
 <style>
     .dataTables_wrapper .dataTables_processing {

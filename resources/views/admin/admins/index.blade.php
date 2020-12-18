@@ -83,39 +83,126 @@
 
 
                 <!-- BEGIN EXAMPLE TABLE PORTLET-->
-                <div class="portlet light ">
+                <div class="portlet light portlet-fit ">
                     <div class="portlet-title">
-                        <div class="caption font-dark">
-                            <i class="fa fa-users font-dark"></i>
-                            <span class="caption-subject bold uppercase"> Admins Management</span>
+                        <div class="caption">
+                            <i class="icon-settings font-red"></i>
+                            <span class="caption-subject font-red sbold uppercase">Admins Table</span>
                         </div>
                     </div>
                     <div class="portlet-body">
                         <div class="table-toolbar">
-                            @can('Add admins')
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="btn-group">
-                                        <a href="{{url(admin_admins_url().'/admin-create')}}" class="btn sbold green add-admin-mdl">
-                                            <i class="fa fa-plus"></i> Add New
-                                        </a>
+                                        <button id="sample_editable_1_new" class="btn green"> Add New
+                                            <i class="fa fa-plus"></i>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
-                            @endcan
                         </div>
-                        <table class="table table-striped table-bordered table-hover table-checkable order-column"
-                               id="admin_tbl">
+                        <table class="table table-striped table-hover table-bordered" id="sample_editable_1">
                             <thead>
                             <tr>
-                                <th>
-                                    #
-                                </th>
-                                <th> Name</th>
-                                <th> Email</th>
-                                <th> Actions</th>
+                                <th> Username </th>
+                                <th> Email </th>
+                                <th> Phone </th>
+
+                                <th> Edit </th>
+                                <th> Delete </th>
                             </tr>
                             </thead>
+                            <tbody>
+                            <tr>
+                                <td> alex </td>
+                                <td> admin@admin.com </td>
+                                <td class="center"> +970 99999999999</td>
+                                <td>
+                                    <a class="edit" href="javascript:;"> Edit </a>
+                                </td>
+                                <td>
+                                    <a class="delete" href="javascript:;"> Delete </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> alex </td>
+                                <td> admin@admin.com </td>
+                                <td class="center"> +970 99999999999</td>
+                                <td>
+                                    <a class="edit" href="javascript:;"> Edit </a>
+                                </td>
+                                <td>
+                                    <a class="delete" href="javascript:;"> Delete </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> alex </td>
+                                <td> admin@admin.com </td>
+                                <td class="center"> +970 99999999999</td>
+                                <td>
+                                    <a class="edit" href="javascript:;"> Edit </a>
+                                </td>
+                                <td>
+                                    <a class="delete" href="javascript:;"> Delete </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> alex </td>
+                                <td> admin@admin.com </td>
+                                <td class="center"> +970 99999999999</td>
+                                <td>
+                                    <a class="edit" href="javascript:;"> Edit </a>
+                                </td>
+                                <td>
+                                    <a class="delete" href="javascript:;"> Delete </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> alex </td>
+                                <td> admin@admin.com </td>
+                                <td class="center"> +970 99999999999</td>
+                                <td>
+                                    <a class="edit" href="javascript:;"> Edit </a>
+                                </td>
+                                <td>
+                                    <a class="delete" href="javascript:;"> Delete </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> alex </td>
+                                <td> admin@admin.com </td>
+                                <td class="center"> +970 99999999999</td>
+                                <td>
+                                    <a class="edit" href="javascript:;"> Edit </a>
+                                </td>
+                                <td>
+                                    <a class="delete" href="javascript:;"> Delete </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> alex </td>
+                                <td> admin@admin.com </td>
+                                <td class="center"> +970 99999999999</td>
+                                <td>
+                                    <a class="edit" href="javascript:;"> Edit </a>
+                                </td>
+                                <td>
+                                    <a class="delete" href="javascript:;"> Delete </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> alex </td>
+                                <td> admin@admin.com </td>
+                                <td class="center"> +970 99999999999</td>
+                                <td>
+                                    <a class="edit" href="javascript:;"> Edit </a>
+                                </td>
+                                <td>
+                                    <a class="delete" href="javascript:;"> Delete </a>
+                                </td>
+                            </tr>
+                            </tbody>
                         </table>
                     </div>
                 </div>

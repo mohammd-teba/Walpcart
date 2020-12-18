@@ -30,7 +30,7 @@
                                                     <span class="input-group-addon">
                                                         <i class="fa fa-user"></i>
                                                     </span>
-                                <input type="text" name="name" class="form-control" value="{{auth()->guard('admin')->user()->name ?? ""}}" placeholder="Enter your name">
+                                <input type="text" name="name" class="form-control" value="{{auth()->guard('admin')->user()->name ?? ""}}" placeholder="Enter your name" disabled>
                             </div>
                         </div>
                         <div class="form-group">
@@ -39,7 +39,7 @@
                                                     <span class="input-group-addon">
                                                         <i class="fa fa-envelope"></i>
                                                     </span>
-                                <input type="email" name="email" class="form-control" value="{{auth()->guard('admin')->user()->email ?? ""}}" placeholder="Email Address">
+                                <input type="email" name="email" class="form-control" value="{{auth()->guard('admin')->user()->email ?? ""}}" placeholder="Email Address" disabled>
                             </div>
                         </div>
                         <div class="form-group">
@@ -49,19 +49,19 @@
                                                         <i class="fa fa-lock"></i>
                                                     </span>
                                 <input type="password" class="form-control" id="password" name="password"
-                                       placeholder="Password">
+                                       placeholder="Password" disabled>
 
                             </div>
                         </div>
                     </div>
-                    <div class="form-actions">
-                        <div class="row">
-                            <div class="col-md-12 text-center">
-                                <button type="submit" class="btn green btn-circle save"><i class="fa fa-check"></i> Save
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+{{--                    <div class="form-actions">--}}
+{{--                        <div class="row">--}}
+{{--                            <div class="col-md-12 text-center">--}}
+{{--                                <button type="submit" class="btn green btn-circle save"><i class="fa fa-check"></i> Save--}}
+{{--                                </button>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
 
 
                     {!! Form::close() !!}

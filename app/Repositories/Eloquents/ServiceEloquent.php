@@ -68,7 +68,7 @@ class ServiceEloquent extends Uploader implements Repository
                                     </a>';
 //
 
-                if(!isset($edit)&& !isset($delete) )
+                if(!isset($activate)&& !isset($edit)&& !isset($delete) )
                     return "";
 
                 return $activate . $edit .  $delete ;

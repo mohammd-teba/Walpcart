@@ -38,7 +38,7 @@
                                                          data-trigger="fileinput"
                                                          style="width: 200px; height: 150px;">
                                                         <img
-                                                            src="{{$team->image ?? url('assets/apps/img/unknown.png')}}"
+                                                            src="{{$service->image ?? url('assets/apps/img/unknown.png')}}"
                                                             alt=""/>
 
                                                     </div>
@@ -59,57 +59,46 @@
                                         </div>
                                     </div>
                                 </div>
-                                <ul class="nav nav-tabs">
+{{--                                <ul class="nav nav-tabs">--}}
 
-                                    @foreach(config('languages.name') as $key => $lang)
-                                        <li @if($loop->first) class="active" @endif>
-                                            <a href="#tab_{{$key}}" data-toggle="tab"> {{ucfirst($lang)}} </a>
-                                        </li>
-                                    @endforeach
+{{--                                    @foreach(config('languages.name') as $key => $lang)--}}
+{{--                                        <li @if($loop->first) class="active" @endif>--}}
+{{--                                            <a href="#tab_{{$key}}" data-toggle="tab"> {{ucfirst($lang)}} </a>--}}
+{{--                                        </li>--}}
+{{--                                    @endforeach--}}
 
-                                </ul>
+{{--                                </ul>--}}
                                 <div class="tab-content">
 
-                                    @foreach(config('languages.name') as $key => $lang)
+{{--                                    @foreach(config('languages.name') as $key => $lang)--}}
 
-                                        <div class="tab-pane fade @if($loop->first) active in @endif "
-                                             id="tab_{{$key}}">
 
-                                            <input type="hidden" name="language" value="{{$key}}">
+{{--                                        <div class="tab-pane fade @if($loop->first) active in @endif "--}}
+{{--                                             id="tab_{{$key}}">--}}
+
+{{--                                            <input type="hidden" name="language" value="{{$key}}">--}}
 
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="form-group">
-                                                        <label class="control-label col-md-3">Name ({{$lang}}):</label>
+                                                        <label class="control-label col-md-3">Name:</label>
                                                         <div class="col-md-9">
-                                                            <input type="text" name="name[{{$key}}]" id="name"
-                                                                   value="{{$team->translation($key)->name}}"
+                                                            <input type="text" name="name" id="name"
+                                                                   value="{{$service->name}}"
                                                                    class="form-control"
-                                                                   placeholder="Add title ({{$lang}})...">
+                                                                   placeholder="Add name ...">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-12">
                                                     <div class="form-group">
-                                                        <label class="control-label col-md-3">Job_title ({{$lang}}):</label>
+                                                        <label class="control-label col-md-3">Description</label>
                                                         <div class="col-md-9">
-                                                            <input type="text" name="job_title[{{$key}}]" id="job_title"
-                                                                   value="{{$team->translation($key)->job_title}}"
-                                                                   class="form-control"
-                                                                   placeholder="Add title ({{$lang}})...">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-12">
-                                                    <div class="form-group">
-                                                        <label class="control-label col-md-3">Description ({{$lang}}
-                                                            ):</label>
-                                                        <div class="col-md-9">
-                                                                <textarea type="text" name="description[{{$key}}]"
+                                                                <textarea type="text" name="description"
                                                                           id="description"
                                                                           class="ckeditor"
                                                                           rows="5"
-                                                                          placeholder="Add description ({{$lang}})...">{{$team->translation($key)->description}}</textarea>
+                                                                          placeholder="Add description...">{{$service->description}}</textarea>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -117,7 +106,7 @@
                                             <!-- END FORM-->
                                         </div>
 
-                                    @endforeach
+{{--                                    @endforeach--}}
                                 </div>
                                 <div class="form-actions">
                                     <div class="row">
@@ -154,7 +143,7 @@
             <script src="{{url(assets('admin'))}}/global/scripts/app.min.js" type="text/javascript"></script>
             <!-- END THEME GLOBAL SCRIPTS -->
 
-            <script src="{{url(assets('admin'))}}/js/hobbies.js" type="text/javascript"></script>
+            <script src="{{url(assets('admin'))}}/js/services.js" type="text/javascript"></script>
 
 
 @stop

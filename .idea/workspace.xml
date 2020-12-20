@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="3086e314-b9b4-42d8-ba30-73c9281c40ea" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ServiceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ServiceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/admin/assets/js/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/assets/js/services.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Eloquents/ServiceEloquent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Eloquents/ServiceEloquent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/services/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/services/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/services/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/services/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +159,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608318073414</updated>
-      <workItem from="1608318077235" duration="21949000" />
+      <workItem from="1608318077235" duration="26110000" />
     </task>
     <servers />
   </component>

@@ -29,7 +29,6 @@ Route::group(['middleware' => 'auth:admin'], function () {
     Route::group(['prefix' => 'admins'], function () {
         Route::get('/', [Admin\AdminController::class, 'index']);
         Route::get('/admin-data', [Admin\AdminController::class, 'anyData']);
-        Route::get('/{id}/view', [Admin\AdminController::class, 'view']);
         Route::get('/admin-create', [Admin\AdminController::class, 'create']);
         Route::post('/admin-create', [Admin\AdminController::class, 'store']);
         Route::get('/admin-edit/{id}', [Admin\AdminController::class, 'edit']);
@@ -40,7 +39,6 @@ Route::group(['middleware' => 'auth:admin'], function () {
     Route::group(['prefix' => 'services'], function () {
         Route::get('/', [Admin\ServiceController::class, 'index']);
         Route::get('/service-data', [Admin\ServiceController::class, 'anyData']);
-        Route::get('/{id}/view', [Admin\ServiceController::class, 'view']);
         Route::get('/service-create', [Admin\ServiceController::class, 'create']);
         Route::post('/service-create', [Admin\ServiceController::class, 'store']);
         Route::get('/service-edit/{id}', [Admin\ServiceController::class, 'edit']);

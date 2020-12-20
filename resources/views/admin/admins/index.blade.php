@@ -19,7 +19,7 @@
                         <div class="caption font-dark">
                             <i class="fa fa-search font-dark"></i>
                             <span
-                                class="caption-subject bold uppercase"> Filter </span>
+                                    class="caption-subject bold uppercase"> Filter </span>
                         </div>
 
                     </div>
@@ -28,14 +28,16 @@
                             {!! Form::open(['method'=>'POST','url'=>url('/admin/export')]) !!}
 
                             <table
-                                class="table table-striped table-bordered table-hover table-checkable"
-                                id="datatable_products">
+                                    class="table table-striped table-bordered table-hover table-checkable"
+                                    id="datatable_products">
                                 <thead>
                                 <tr role="row" class="heading">
                                     <th width="1%">
                                     </th>
                                     <th width="10%"> Name</th>
                                     <th width="10%"> Email</th>
+                                    <th width="10%"> Phone</th>
+                                    <th width="10%"> Status</th>
                                     <th width="10%"> Action</th>
                                 </tr>
                                 <tr role="row" class="filter">
@@ -54,6 +56,20 @@
                                                name="email"
                                                placeholder="Email"
                                                id="email">
+                                    </td>
+                                    <td>
+                                        <input type="text"
+                                               class="form-control form-filter input-md"
+                                               name="phone"
+                                               placeholder="Phone"
+                                               id="phone">
+                                    </td>
+                                    <td>
+                                        <select class="form-control input-md level " name="status" id="status" data-placeholder="Status">
+                                            <option value="">Choose status</option>
+                                            <option value="1">Active</option>
+                                            <option value="0">Inactive</option>
+                                        </select>
                                     </td>
                                     <td>
                                         <div class="margin-bottom-5">
@@ -83,126 +99,40 @@
 
 
                 <!-- BEGIN EXAMPLE TABLE PORTLET-->
-                <div class="portlet light portlet-fit ">
+                <div class="portlet light ">
                     <div class="portlet-title">
-                        <div class="caption">
-                            <i class="icon-settings font-red"></i>
-                            <span class="caption-subject font-red sbold uppercase">Admins Table</span>
+                        <div class="caption font-dark">
+                            <i class="fa fa-users font-dark"></i>
+                            <span class="caption-subject bold uppercase"> Admins Management</span>
                         </div>
                     </div>
                     <div class="portlet-body">
                         <div class="table-toolbar">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="btn-group">
-                                        <button id="sample_editable_1_new" class="btn green"> Add New
-                                            <i class="fa fa-plus"></i>
-                                        </button>
+{{--                            @can('Add admins')--}}
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="btn-group">
+                                            <a href="{{url(admin_admins_url().'/admin-create')}}" class="btn sbold green add-admin-mdl">
+                                                <i class="fa fa-plus"></i> Add New
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+{{--                            @endcan--}}
                         </div>
-                        <table class="table table-striped table-hover table-bordered" id="sample_editable_1">
+                        <table class="table table-striped table-bordered table-hover table-checkable order-column"
+                               id="admin_tbl">
                             <thead>
                             <tr>
-                                <th> Username </th>
-                                <th> Email </th>
-                                <th> Phone </th>
-
-                                <th> Edit </th>
-                                <th> Delete </th>
+                                <th>
+                                    #
+                                </th>
+                                <th> Name</th>
+                                <th> Email</th>
+                                <th> Status</th>
+                                <th> Actions</th>
                             </tr>
                             </thead>
-                            <tbody>
-                            <tr>
-                                <td> alex </td>
-                                <td> admin@admin.com </td>
-                                <td class="center"> +970 99999999999</td>
-                                <td>
-                                    <a class="edit" href="javascript:;"> Edit </a>
-                                </td>
-                                <td>
-                                    <a class="delete" href="javascript:;"> Delete </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td> alex </td>
-                                <td> admin@admin.com </td>
-                                <td class="center"> +970 99999999999</td>
-                                <td>
-                                    <a class="edit" href="javascript:;"> Edit </a>
-                                </td>
-                                <td>
-                                    <a class="delete" href="javascript:;"> Delete </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td> alex </td>
-                                <td> admin@admin.com </td>
-                                <td class="center"> +970 99999999999</td>
-                                <td>
-                                    <a class="edit" href="javascript:;"> Edit </a>
-                                </td>
-                                <td>
-                                    <a class="delete" href="javascript:;"> Delete </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td> alex </td>
-                                <td> admin@admin.com </td>
-                                <td class="center"> +970 99999999999</td>
-                                <td>
-                                    <a class="edit" href="javascript:;"> Edit </a>
-                                </td>
-                                <td>
-                                    <a class="delete" href="javascript:;"> Delete </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td> alex </td>
-                                <td> admin@admin.com </td>
-                                <td class="center"> +970 99999999999</td>
-                                <td>
-                                    <a class="edit" href="javascript:;"> Edit </a>
-                                </td>
-                                <td>
-                                    <a class="delete" href="javascript:;"> Delete </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td> alex </td>
-                                <td> admin@admin.com </td>
-                                <td class="center"> +970 99999999999</td>
-                                <td>
-                                    <a class="edit" href="javascript:;"> Edit </a>
-                                </td>
-                                <td>
-                                    <a class="delete" href="javascript:;"> Delete </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td> alex </td>
-                                <td> admin@admin.com </td>
-                                <td class="center"> +970 99999999999</td>
-                                <td>
-                                    <a class="edit" href="javascript:;"> Edit </a>
-                                </td>
-                                <td>
-                                    <a class="delete" href="javascript:;"> Delete </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td> alex </td>
-                                <td> admin@admin.com </td>
-                                <td class="center"> +970 99999999999</td>
-                                <td>
-                                    <a class="edit" href="javascript:;"> Edit </a>
-                                </td>
-                                <td>
-                                    <a class="delete" href="javascript:;"> Delete </a>
-                                </td>
-                            </tr>
-                            </tbody>
                         </table>
                     </div>
                 </div>

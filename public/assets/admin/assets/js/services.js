@@ -1,24 +1,22 @@
-var admin_tbl = $("#admin_tbl");
-
+var services_tbl = $("#services_tbl");
 $(document).ready(function () {
 
-    if ($("#admin_tbl").length) {
 
-        var admin_tbl = $("#admin_tbl");
-        admin_tbl.on('preXhr.dt', function (e, settings, data) {
-            data.name = $('#name').val();
-            data.email = $('#email').val();
-            data.phone = $('#phone').val();
-            data.status = $('#status').val();
+    if ($("#services_tbl").length) {
+
+        var services_tbl = $("#services_tbl");
+        services_tbl.on('preXhr.dt', function (e, settings, data) {
+            // data.name = $('#name').val();
+            // data.job_title = $('#job_title').val();
         }).dataTable({
             "processing": true,
             "serverSide": true,
             "ajax": {
-                url: baseURL + "/admins/admin-data"
-                , "dataSrc": function (json) {
+                url: baseURL + "/services/service-data",
+                "dataSrc": function (json) {
                     //Make your callback here.
-                    if (json.status != undefined && !json.status) {
-                        $('#admin_tbl_processing').hide();
+                    if (json.status !== undefined && !json.status) {
+                        $('#teams_tbl_processing').hide();
                         location.reload();
                         //
                     } else
@@ -28,92 +26,50 @@ $(document).ready(function () {
 
             columns: [
                 {data: 'DT_RowIndex', name: 'DT_RowIndex'},
+                {data: 'image', name: 'image'},
                 {data: 'name', name: 'name'},
-                {data: 'email', name: 'email'},
                 {data: 'is_active', name: 'is_active'},
                 {data: 'action', name: 'action'}
             ],
+            "fnDrawCallback": function () {
+                //Initialize checkbos for enable/disable user
+                $(".make-switch").bootstrapSwitch({size: "mini", onColor: "success", offColor: "danger"});
+            },
 
             language: {
                 "sProcessing": "<img src='" + baseAssets + "/apps/img/preloader.gif'>",
             },
+
             "searching": false,
             "ordering": false,
-
             bStateSave: !0,
             lengthMenu: [[5, 10, 15, 20, -1], [5, 10, 15, 20, "All"]],
             pageLength: 10,
             pagingType: "bootstrap_full_number",
             columnDefs: [{orderable: !1, targets: [0]}, {searchable: !1, targets: [0]}, {className: "dt-right"}],
-            order: [[2, "asc"]]
+            order: [[1, "asc"]],
+
         });
     }
 
     $(document).on("click", ".filter-submit", function () {
-        admin_tbl.api().ajax.reload();
+        services_tbl.api().ajax.reload();
     });
     $(document).on('click', '.filter-cancel', function () {
         $(".select2").val('').trigger('change');
         $(this).closest('tr').find('input').val('');
-        admin_tbl.api().ajax.reload();
+        services_tbl.api().ajax.reload();
     });
-
-    $(document).on('click', '.add-admin-mdl', function (e) {
-        e.preventDefault();
-        $("#wait_msg,#overlay").show();
-        var action = $(this).attr('href');
-
-        $.ajax({
-            url: action,
-            type: 'GET',
-            success: function (data) {
-                $("#wait_msg,#overlay").hide();
-
-                $('#results-modals').html(data);
-                $('#add-admin').modal('show', {backdrop: 'static', keyboard: false});
-            }, error: function (xhr) {
-
-            }
-        });
-    });
-
-    $(document).on('click', '.edit-admin-mdl', function (e) {
-        $("#wait_msg,#overlay").show();
-        e.preventDefault();
-        var action = $(this).attr('href');
-        $.ajax({
-            url: action,
-            type: 'GET',
-            success: function (data) {
-                $("#wait_msg,#overlay").hide();
-
-                $('#results-modals').html(data);
-                $('#edit-admin').modal('show', {backdrop: 'static', keyboard: false});
-            }, error: function (xhr) {
-
-            }
-        });
-    });
-
-    $(document).on("click", ".filter-submit", function () {
-        admin_tbl.api().ajax.reload();
-    });
-    $(document).on('click', '.filter-cancel', function () {
-        $(".select2").val('').trigger('change');
-        $(this).closest('tr').find('input').val('');
-        admin_tbl.api().ajax.reload();
-    });
-
 
     $(document).on('click', '.delete', function (event) {
 
         var _this = $(this);
         var action = _this.attr('href');
         event.preventDefault();
-        var constant_name = _this.closest('tr').find("td:eq(2)").text();
+        var sector_name = _this.closest('tr').find("td:eq(1)").text();
 
         bootbox.dialog({
-            message: "Are you sure (" + constant_name + ")? <span class='label label-danger'> you can not return back!</span>",
+            message: "Are you sure (" + sector_name + ")? <span class='label label-danger'> you can not return back!</span>",
             title: "Confirm deleting!",
             buttons: {
 
@@ -131,7 +87,7 @@ $(document).ready(function () {
 
                                 if (data.status) {
                                     toastr['success'](data.message, '');
-                                    admin_tbl.api().ajax.reload();
+                                    services_tbl.api().ajax.reload();
                                 } else {
                                     toastr['error'](data.message);
                                 }
@@ -180,8 +136,11 @@ $(document).ready(function () {
                     $('.alert').hide();
 
                     toastr.success(data.message);
-                    admin_tbl.api().ajax.reload();
-
+                    // talents_tbl.api().ajax.reload();
+                    setTimeout(function () {
+                        location.reload();
+                    }, 2000)
+                    // location.href = baseURL + "/talent/archive/" + data.items.id;
                 } else {
 
                     if (data.statusCode == 401) {
@@ -209,17 +168,16 @@ $(document).ready(function () {
         });
     });
 
-
     $(document).on('click', '.is_active', function (event) {
 
         var _this = $(this);
-        var admin_id = _this.data('id');
+        var service_id = _this.data('id');
         event.preventDefault();
         $.ajax({
-            url: baseURL + '/admins/admin-activation',
+            url: baseURL + '/services/service-activation',
             type: 'PUT',
             dataType: 'json',
-            data: {'_token': csrf_token, 'admin_id': admin_id},
+            data: {'_token': csrf_token, 'service_id': service_id},
             success: function (data) {
 
                 if (data.status) {
@@ -236,5 +194,4 @@ $(document).ready(function () {
         });
 
     });
-
 });

@@ -20,6 +20,35 @@ function generateVerificationCode($digits = 6)
     return $pin;
 }
 
+function response_api($status, $statusCode, $message = null, $object = null, $page_count = null, $page = null, $count = null, $errors = null, $another_data = null)
+{
+
+    $message = isset($message) ? $message : message($statusCode);
+    $error = ['status' => false, 'statusCode' => $statusCode, 'message' => $message];
+    $success = ['status' => true, 'statusCode' => $statusCode, 'message' => $message];
+
+    if ($status && isset($object)) {
+        if (isset($page_count) && isset($page)) {
+            if (isset($another_data))
+                $success['items'] = ['info' => $another_data, 'data' => $object, 'total_pages' => $page_count, 'current_page' => $page + 1, 'total_records' => $count];
+            else
+                $success['items'] = ['data' => $object, 'total_pages' => $page_count, 'current_page' => $page + 1, 'total_records' => $count];
+        } else
+            $success['items'] = $object;
+
+    } else if (!$status && isset($errors))
+        $error['errors'] = $errors;
+    else if (isset($object) || (is_array($object) && empty($object)))
+        $error['items'] = $object;
+
+    if (isset($another_data))
+        foreach ($another_data as $key => $value)
+            $success [$key] = $value;
+    $response = ($status) ? $success : $error;
+    return response()->json($response);
+}
+
+
 function authAdmin()
 {
     if (auth()->guard('admin')->check())
@@ -150,7 +179,7 @@ function public_url()
 
 function upload_url()
 {
-    return base_path() . '/assets/upload';
+    return base_path() . '/public/upload';
 }
 
 function upload_assets()

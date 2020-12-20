@@ -183,7 +183,7 @@ $(document).ready(function () {
                 if (data.status) {
                     $('.alert').hide();
                     toastr['success'](data.message, '');
-                    admin_tbl.api().ajax.reload();
+                    services_tbl.api().ajax.reload();
 
                 }
                 else {

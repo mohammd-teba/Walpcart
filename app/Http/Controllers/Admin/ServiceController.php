@@ -58,6 +58,6 @@ class ServiceController extends Controller
 
     public function serviceActivate(Request $request)
     {
-        return $this->service->serviceActivate($request->only('admin_id'));
+        return $this->service->serviceActivate($request->only('service_id'));
     }
 }

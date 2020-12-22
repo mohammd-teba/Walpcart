@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Admin;
+namespace App\Http\Requests\Vendor;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CreateAdminRequest extends FormRequest
+class CreateVendorRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,10 +25,12 @@ class CreateAdminRequest extends FormRequest
     {
         return [
             'name' => 'required|string|max:191',
-            'email' => 'required|string|email|max:191|unique:admins',
+            'email' => 'required|string|email|max:191|unique:vendors',
             'phone' => 'required|numeric',
             'address' => 'required|string',
-            'password' => 'required|string|min:6',
+            'image' => 'nullable|image',
+            'url' => 'required|string',
+            'product_id' => 'required|integer',
         ];
     }
 }

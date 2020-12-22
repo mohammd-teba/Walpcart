@@ -43,11 +43,28 @@ Route::group(['middleware' => 'auth:admin'], function () {
         Route::post('/service-create', [Admin\ServiceController::class, 'store']);
         Route::get('/service-edit/{id}', [Admin\ServiceController::class, 'edit']);
         Route::put('/service-edit/{id}', [Admin\ServiceController::class, 'update']);
-        Route::delete('/{id}', [Admin\ServiceController::class, 'delete']);
+        Route::delete('service/{id}', [Admin\ServiceController::class, 'delete']);
         Route::put('/service-activation', [Admin\ServiceController::class, 'serviceActivate']);
     });
     Route::group(['prefix' => 'products'], function () {
         Route::get('/', [Admin\ProductController::class, 'index']);
+        Route::get('/product-data', [Admin\ProductController::class, 'anyData']);
+        Route::get('/product-create', [Admin\ProductController::class, 'create']);
+        Route::post('/product-create', [Admin\ProductController::class, 'store']);
+        Route::get('/product-edit/{id}', [Admin\ProductController::class, 'edit']);
+        Route::put('/product-edit/{id}', [Admin\ProductController::class, 'update']);
+        Route::delete('product/{id}', [Admin\ProductController::class, 'delete']);
+        Route::put('/product-activation', [Admin\ProductController::class, 'productActivate']);
+    });
+    Route::group(['prefix' => 'vendors'], function () {
+        Route::get('/', [Admin\VendorController::class, 'index']);
+        Route::get('/vendor-data', [Admin\VendorController::class, 'anyData']);
+        Route::get('/vendor-create', [Admin\VendorController::class, 'create']);
+        Route::post('/vendor-create', [Admin\VendorController::class, 'store']);
+        Route::get('/vendor-edit/{id}', [Admin\VendorController::class, 'edit']);
+        Route::put('/vendor-edit/{id}', [Admin\VendorController::class, 'update']);
+        Route::delete('vendor/{id}', [Admin\VendorController::class, 'delete']);
+        Route::put('/vendor-activation', [Admin\VendorController::class, 'vendorActivate']);
     });
 
 

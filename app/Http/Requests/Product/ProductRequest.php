@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Admin;
+namespace App\Http\Requests\Product;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CreateAdminRequest extends FormRequest
+class ProductRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,11 +24,11 @@ class CreateAdminRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|string|max:191',
-            'email' => 'required|string|email|max:191|unique:admins',
-            'phone' => 'required|numeric',
-            'address' => 'required|string',
-            'password' => 'required|string|min:6',
+            'name' => 'required',
+            'description' => 'required',
+            'cost' => 'required|numeric',
+            'url' => 'required',
+            'service_id' => 'required|integer',
         ];
     }
 }

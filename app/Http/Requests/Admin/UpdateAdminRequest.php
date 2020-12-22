@@ -32,7 +32,7 @@ class UpdateAdminRequest extends FormRequest
             'name' => 'required|string',
             'email' => 'required|email|regex:/(.+)@(.+)\.(.+)/i|unique:admins,email,'. $user_id,
             'password' => 'nullable|string|min:6',
-            'phone' => 'required|string',
+            'phone' => 'required|numeric',
             'address' => 'required|string',
         ];
     }

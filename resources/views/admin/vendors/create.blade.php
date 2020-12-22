@@ -18,7 +18,7 @@
                     <div class="portlet-title">
                         <div class="caption font-dark">
                             <i class="fa fa-plus font-dark"></i>
-                            <span class="caption-subject bold uppercase">Services</span>
+                            <span class="caption-subject bold uppercase">Vendors</span>
                         </div>
                     </div>
                     <div class="portlet-body">
@@ -78,6 +78,7 @@
 
 {{--                                            <input type="hidden" name="language" value="{{$key}}">--}}
 
+
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="form-group">
@@ -89,18 +90,55 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="row">
-
                                                 <div class="col-md-12">
                                                     <div class="form-group">
-                                                        <label class="control-label col-md-3">Description :</label>
+                                                        <label class="control-label col-md-3">Email:</label>
                                                         <div class="col-md-9">
-                                                                <textarea type="text" name="description"
-                                                                          id="description"
-                                                                          class="ckeditor"
-                                                                          rows="5"
-                                                                          placeholder="Add description ..."></textarea>
+                                                            <input type="email" name="email" id="email"
+                                                                   class="form-control"
+                                                                   placeholder="Add email ...">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-3">Phone:</label>
+                                                        <div class="col-md-9">
+                                                            <input type="text" name="phone" id="phone"
+                                                                   class="form-control"
+                                                                   placeholder="Add phone ...">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-3">Address:</label>
+                                                        <div class="col-md-9">
+                                                            <input type="text" name="address" id="address"
+                                                                   class="form-control"
+                                                                   placeholder="Add address ...">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-3">Url:</label>
+                                                        <div class="col-md-9">
+                                                            <input type="url" name="url" id="url"
+                                                                   class="form-control"
+                                                                   placeholder="Add website url ...">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-3">Product:</label>
+                                                        <div class="col-md-9">
+                                                            <select class="form-control" name="product_id">
+                                                                @foreach($products as $product)
+                                                                    <option value="{{ $product->id }}" {{ isset($product) && $product->{'product_id'} == $product->id ? 'selected' :'' }} > {{ $product->name }}</option>
+                                                                @endforeach
+                                                            </select>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -146,7 +184,7 @@
             <script src="{{url(assets('admin'))}}/global/scripts/app.min.js" type="text/javascript"></script>
             <!-- END THEME GLOBAL SCRIPTS -->
 
-            <script src="{{url(assets('admin'))}}/js/services.js" type="text/javascript"></script>
+            <script src="{{url(assets('admin'))}}/js/vendors.js" type="text/javascript"></script>
 
 
 @stop

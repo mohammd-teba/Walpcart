@@ -38,10 +38,18 @@
 {{--                </a>--}}
 {{--            </li>--}}
 
-            <li class="nav-item @if(preg_match('/users/i',url()->current())) start active open @endif">
-                <a href="{{url(admin_users_url())}}" class="nav-link nav-toggle">
+{{--            <li class="nav-item @if(preg_match('/users/i',url()->current())) start active open @endif">--}}
+{{--                <a href="{{url(admin_users_url())}}" class="nav-link nav-toggle">--}}
+{{--                    <i class="fa fa-users"></i>--}}
+{{--                    <span class="title">Users</span>--}}
+{{--                    <span class="selected"></span>--}}
+{{--                </a>--}}
+
+{{--            </li>--}}
+            <li class="nav-item @if(preg_match('/vendors/i',url()->current())) start active open @endif">
+                <a href="{{url(admin_vendors_url())}}" class="nav-link nav-toggle">
                     <i class="fa fa-users"></i>
-                    <span class="title">Users</span>
+                    <span class="title">Vendors</span>
                     <span class="selected"></span>
                 </a>
 

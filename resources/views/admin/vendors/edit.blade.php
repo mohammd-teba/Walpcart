@@ -17,13 +17,13 @@
                 <div class="portlet light ">
                     <div class="portlet-title">
                         <div class="caption font-dark">
-                            <i class="fa fa-plus font-dark"></i>
-                            <span class="caption-subject bold uppercase">Services</span>
+                            <i class="fa fa-edit font-dark"></i>
+                            <span class="caption-subject bold uppercase"> Vendors</span>
                         </div>
                     </div>
                     <div class="portlet-body">
 
-                        {!! Form::open(['method'=>'post','class'=>'form-horizontal','files'=>true,'id'=>'form']) !!}
+                        {!! Form::open(['method'=>'put','class'=>'form-horizontal','files'=>true,'id'=>'form']) !!}
                         <div class="portlet-body form">
                             <!-- BEGIN FORM-->
                             <div class="form-body">
@@ -37,8 +37,9 @@
                                                     <div class="fileinput-preview thumbnail"
                                                          data-trigger="fileinput"
                                                          style="width: 200px; height: 150px;">
-                                                        <img src="{{url('assets/apps/img/unknown.png')}}"
-                                                             alt=""/>
+                                                        <img
+                                                            src="{{$vendor->image ?? url('assets/apps/img/unknown.png')}}"
+                                                            alt=""/>
 
                                                     </div>
                                                     <div>
@@ -58,8 +59,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <hr>
-
 {{--                                <ul class="nav nav-tabs">--}}
 
 {{--                                    @foreach(config('languages.name') as $key => $lang)--}}
@@ -73,6 +72,7 @@
 
 {{--                                    @foreach(config('languages.name') as $key => $lang)--}}
 
+
 {{--                                        <div class="tab-pane fade @if($loop->first) active in @endif "--}}
 {{--                                             id="tab_{{$key}}">--}}
 
@@ -81,30 +81,72 @@
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="form-group">
-                                                        <label class="control-label col-md-3">Name :</label>
+                                                        <label class="control-label col-md-3">Name:</label>
                                                         <div class="col-md-9">
                                                             <input type="text" name="name" id="name"
+                                                                   value="{{$vendor->name}}"
                                                                    class="form-control"
-                                                                   placeholder="Add name...">
+                                                                   placeholder="Add name ...">
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="row">
-
                                                 <div class="col-md-12">
                                                     <div class="form-group">
-                                                        <label class="control-label col-md-3">Description :</label>
+                                                        <label class="control-label col-md-3">Email:</label>
                                                         <div class="col-md-9">
-                                                                <textarea type="text" name="description"
-                                                                          id="description"
-                                                                          class="ckeditor"
-                                                                          rows="5"
-                                                                          placeholder="Add description ..."></textarea>
+                                                            <input type="email" name="email" id="email"
+                                                                   value="{{$vendor->email}}"
+                                                                   class="form-control"
+                                                                   placeholder="Add email ...">
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-3">Phone:</label>
+                                                        <div class="col-md-9">
+                                                            <input type="text" name="phone" id="phone"
+                                                                   value="{{$vendor->phone}}"
+                                                                   class="form-control"
+                                                                   placeholder="Add phone ...">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-3">Address:</label>
+                                                        <div class="col-md-9">
+                                                            <input type="text" name="address" id="address"
+                                                                   value="{{$vendor->address}}"
+                                                                   class="form-control"
+                                                                   placeholder="Add address ...">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-3">Url:</label>
+                                                        <div class="col-md-9">
+                                                            <input type="url" name="url" id="url"
+                                                                   value="{{$vendor->url}}"
+                                                                   class="form-control"
+                                                                   placeholder="Add website url ...">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-3">Product:</label>
+                                                        <div class="col-md-9">
+                                                            <select name="product_id" class="form-control">
+                                                                @foreach($products as $product)
+                                                                    <option value="{{ $product->id }}" {{ isset($vendor) && $vendor->{'product_id'} == $product->id ? 'selected' :'' }} > {{ $product->name }} </option>
+                                                                @endforeach
 
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <!-- END FORM-->
                                         </div>
@@ -146,7 +188,7 @@
             <script src="{{url(assets('admin'))}}/global/scripts/app.min.js" type="text/javascript"></script>
             <!-- END THEME GLOBAL SCRIPTS -->
 
-            <script src="{{url(assets('admin'))}}/js/services.js" type="text/javascript"></script>
+            <script src="{{url(assets('admin'))}}/js/vendors.js" type="text/javascript"></script>
 
 
 @stop

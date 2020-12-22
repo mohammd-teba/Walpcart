@@ -158,6 +158,16 @@ function admin_products_url()
 {
     return admin_vw() . '/products';
 }
+function admin_vendors_vw()
+{
+    return admin_vw() . '.vendors';
+}
+
+
+function admin_vendors_url()
+{
+    return admin_vw() . '/vendors';
+}
 
 
 

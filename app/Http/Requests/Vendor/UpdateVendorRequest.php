@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Admin;
+namespace App\Http\Requests\Vendor;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CreateAdminRequest extends FormRequest
+class UpdateVendorRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,12 +23,18 @@ class CreateAdminRequest extends FormRequest
      */
     public function rules()
     {
+         $str = $_SERVER['REQUEST_URI'];
+        preg_match_all('!\d+!', $str, $user_id);
+
+        $user_id =(int) $user_id[0][0];
         return [
             'name' => 'required|string|max:191',
-            'email' => 'required|string|email|max:191|unique:admins',
+           'email' => 'required|email|regex:/(.+)@(.+)\.(.+)/i|unique:vendors,email,'. $user_id,
             'phone' => 'required|numeric',
             'address' => 'required|string',
-            'password' => 'required|string|min:6',
+            'image' => 'nullable|image',
+            'url' => 'required|string',
+            'product_id' => 'required|integer',
         ];
     }
 }

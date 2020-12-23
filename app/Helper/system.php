@@ -227,7 +227,11 @@ function admin_layout_vw()
 
 function site_layout_vw()
 {
-    return 'site.layout';
+    return 'website.layout';
+}
+function site_home_vw()
+{
+    return 'website.home';
 }
 
 function notification_trans()

@@ -2,43 +2,95 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3086e314-b9b4-42d8-ba30-73c9281c40ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Repositories/Eloquents/ProductEloquent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repositories/Eloquents/VendorEloquent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/assets/js/products.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/assets/js/vendors.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/products/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/products/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/vendors/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/vendors/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/vendors/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/website/home/header.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/website/home/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/website/layout/css.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/website/layout/footer.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/website/layout/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/website/layout/js.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/website/layout/nav.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Walpcart.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Walpcart.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at________Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at________Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at________Default_Changelist_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at________Default_Changelist_2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Helper/system.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helper/system.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/VendorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/VendorController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Admin/CreateAdminRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Admin/CreateAdminRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Admin/UpdateAdminRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Admin/UpdateAdminRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Eloquents/ServiceEloquent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Eloquents/ServiceEloquent.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_18_193546_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_18_193546_create_products_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layout/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layout/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/products/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/products/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/services/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/services/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/css/animate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/css/animate.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/css/animation.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/website/assets/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/css/lightbox.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/css/lightslider.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/css/lightslider.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/css/owl.carousel.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/css/owl.carousel.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/css/owl.theme.default.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/css/owl.theme.default.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/css/player.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/css/responsive.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/css/selectric.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/fonts/NoorRegular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/images/Rectangle Copy 10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/images/about.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/images/background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/images/bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/images/flag.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/images/footer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/images/heroBG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/images/logoFooter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/images/manager.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/images/mem1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/images/mem2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/images/mem3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/images/mem4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/images/mem5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/images/mem6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/images/mem7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/images/mem8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/images/palm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/images/project1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/images/project2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/images/projrect3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/images/video.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/images/who.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/js/jquery-ui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/js/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/js/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/js/jquery.selectric.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/js/jquery3.3.1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/js/lightbox.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/js/lightslider.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/js/lightslider.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/js/mousescroll.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/js/owl.carousel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/js/owl.carousel.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/js/popper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/js/popper.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/js/smoothscroll.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/js/wow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/website/assets/js/wow.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/products/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/products/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="khaled" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -161,18 +213,24 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/products" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/website/layout" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Khaled Alreqeb\Desktop\Walpcart\resources\views\website\layout" />
       <recent name="C:\Users\Mohammed Teba\Desktop\Walpcart\resources\views\admin\products" />
       <recent name="C:\Users\Mohammed Teba\Desktop\Walpcart\app\Repositories\Eloquents" />
       <recent name="C:\Users\Mohammed Teba\Desktop\Walpcart\public\assets\admin\assets\js" />
       <recent name="C:\Users\Mohammed Teba\Desktop\Walpcart\resources\views\admin" />
-      <recent name="C:\Users\Mohammed Teba\Desktop\Walpcart\resources\views" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner scope="XML" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -183,6 +241,8 @@
       <option name="presentableId" value="Default" />
       <updated>1608318073414</updated>
       <workItem from="1608318077235" duration="32663000" />
+      <workItem from="1608727223976" duration="1265000" />
+      <workItem from="1608736186965" duration="4483000" />
     </task>
     <servers />
   </component>

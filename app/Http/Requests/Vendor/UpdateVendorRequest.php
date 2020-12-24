@@ -30,7 +30,7 @@ class UpdateVendorRequest extends FormRequest
         return [
             'name' => 'required|string|max:191',
            'email' => 'required|email|regex:/(.+)@(.+)\.(.+)/i|unique:vendors,email,'. $user_id,
-            'phone' => 'required|numeric',
+            'phone' => 'required',
             'address' => 'required|string',
             'image' => 'nullable|image',
             'url' => 'required|string',

@@ -26,7 +26,7 @@ class ProductRequest extends FormRequest
         return [
             'name' => 'required',
             'description' => 'required',
-            'cost' => 'required|numeric',
+            'cost' => 'required',
             'url' => 'required',
             'service_id' => 'required|integer',
         ];

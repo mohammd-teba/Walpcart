@@ -26,7 +26,7 @@ class CreateVendorRequest extends FormRequest
         return [
             'name' => 'required|string|max:191',
             'email' => 'required|string|email|max:191|unique:vendors',
-            'phone' => 'required|numeric',
+            'phone' => 'required',
             'address' => 'required|string',
             'image' => 'nullable|image',
             'url' => 'required|string',

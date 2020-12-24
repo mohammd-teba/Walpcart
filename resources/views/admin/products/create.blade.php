@@ -53,7 +53,7 @@
                                                 <div class="col-md-9">
                                                     <input type="text" name="name" id="name"
                                                            class="form-control"
-                                                           placeholder="Add title...">
+                                                           placeholder="Add Product...">
                                                 </div>
                                             </div>
                                         </div>

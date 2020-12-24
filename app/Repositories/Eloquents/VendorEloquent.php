@@ -9,14 +9,19 @@
 namespace App\Repositories\Eloquents;
 
 
+use App\Mail\ReplayMessage;
+use App\Mail\ReplayVendor;
 use App\Models\Admin;
+use App\Models\mailVendor;
 use App\Models\Service;
 use App\Models\Vendor;
+use App\Models\VendorMail;
 use App\Repositories\Interfaces\Repository;
 use App\Repositories\Uploader;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Mail;
 use Spatie\Permission\Models\Role;
 
 class VendorEloquent extends Uploader implements Repository
@@ -91,12 +96,18 @@ class VendorEloquent extends Uploader implements Repository
                     $delete = '   <a href="' . url(admin_vendors_url() . '/vendor/' . $item->id) . '" class="btn btn-circle btn-icon-only red delete">
                                         <i class="fa fa-trash"></i>
                                     </a>';
+
+                $replay="";
+
+                $replay = '   <a href="' . url(admin_vendors_url() . '/vendor-replay/' . $item->id) . '" class="btn btn-circle btn-icon-only blue replay">
+                                       <i class="fas fa-envelope"></i>
+                                    </a>';
 //
 
-                if(!isset($activate)&& !isset($edit)&& !isset($delete) )
+                if(!isset($activate)&& !isset($edit)&& !isset($delete) && !isset($replay) )
                     return "";
 
-                return $activate . $edit .  $delete ;
+                return $activate . $edit .  $delete . $replay ;
 
             })->addIndexColumn()
             ->rawColumns(['image' ,'url' , 'is_active' , 'action'])->toJson();
@@ -171,6 +182,22 @@ class VendorEloquent extends Uploader implements Repository
                 return response_api(true, 200, __('app.success'), $model);
             }
         }
+        return response_api(false, 422, __('app.error'));
+    }
+
+
+
+    function storeReplay(array $attributes, $id = null)
+    {
+        // TODO: Implement update() method.
+        $model = $this->model->find($id);
+
+        Mail::send(new ReplayVendor($model , $attributes['message']));
+
+            if ($model->save()) {
+                return response_api(true, 200, __('app.success'), $model);
+            }
+
         return response_api(false, 422, __('app.error'));
     }
 

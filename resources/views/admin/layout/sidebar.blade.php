@@ -70,6 +70,14 @@
                 </a>
 
             </li>
+{{--            <li class="nav-item @if(preg_match('/mails/i',url()->current())) start active open @endif">--}}
+{{--                <a href="{{url(admin_mail_url())}}" class="nav-link nav-toggle">--}}
+{{--                    <i class="fa fa-users"></i>--}}
+{{--                    <span class="title">Send mail</span>--}}
+{{--                    <span class="selected"></span>--}}
+{{--                </a>--}}
+
+{{--            </li>--}}
 
 
         </ul>

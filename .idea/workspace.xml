@@ -7,10 +7,13 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
 =======
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+=======
       <change beforePath="$PROJECT_DIR$/resources/views/website/home/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/website/home/header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/website/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/website/home/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/website/layout/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/website/layout/nav.blade.php" afterDir="false" />
 >>>>>>> 85ce8aa1959d77c995d9c981f3053ee7d3695e4e
+>>>>>>> 96f440ce4fc1bbb1db9fdd4fba2cc75e965e9dcf
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,11 +146,15 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1lqICwyPpsIZXhcV5jPWGu4XJ85" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -184,12 +191,21 @@
 =======
       <workItem from="1608727223976" duration="1265000" />
       <workItem from="1608736186965" duration="4891000" />
+<<<<<<< HEAD
+      <workItem from="1608748052058" duration="13105000" />
+      <workItem from="1608820610623" duration="6450000" />
+      <workItem from="1608831800848" duration="839000" />
+=======
       <workItem from="1608748052058" duration="12232000" />
 >>>>>>> 85ce8aa1959d77c995d9c981f3053ee7d3695e4e
+>>>>>>> 96f440ce4fc1bbb1db9fdd4fba2cc75e965e9dcf
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

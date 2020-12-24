@@ -25,6 +25,7 @@
  * http://www.apache.org/licenses/LICENSE-2.0
  */
 
+
 .bootstrap-switch {
   display: inline-block;
   direction: ltr;
@@ -58,6 +59,10 @@
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   width: 100px !important;
+}
+@font-face {
+  font-family: walpcartSTC;
+  src: url('../fonts/STC-Regular.ttf');
 }
 
 .bootstrap-switch .bootstrap-switch-handle-on,

@@ -1,7 +1,7 @@
 <div class="filter"></div>
-<div class="content-center" style="margin-top: 60px">
+<div class="content-center" style="margin-top: 9px">
 {{--    <div class="container">--}}
-        <div class="col-md-10 ml-auto mr-auto">
+        <div class="col-md-12 ml-auto mr-auto">
             <div class="card page-carousel">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">

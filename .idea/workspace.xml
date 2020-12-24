@@ -2,43 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3086e314-b9b4-42d8-ba30-73c9281c40ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Repositories/Eloquents/ProductEloquent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repositories/Eloquents/VendorEloquent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/assets/js/products.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/assets/js/vendors.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/products/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/products/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/vendors/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/vendors/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/vendors/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at________Default_Changelist_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at________Default_Changelist_2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Helper/system.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helper/system.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/VendorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/VendorController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Admin/CreateAdminRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Admin/CreateAdminRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Admin/UpdateAdminRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Admin/UpdateAdminRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Eloquents/ServiceEloquent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Eloquents/ServiceEloquent.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_18_193546_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_18_193546_create_products_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layout/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layout/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/products/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/products/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/services/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/services/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="khaled" />
+        <entry key="$PROJECT_DIR$" value="khaled_develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -174,6 +153,12 @@
       <recent name="C:\Users\Mohammed Teba\Desktop\Walpcart\resources\views" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner scope="XML" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -183,6 +168,7 @@
       <option name="presentableId" value="Default" />
       <updated>1608318073414</updated>
       <workItem from="1608318077235" duration="32663000" />
+      <workItem from="1608794564731" duration="436000" />
     </task>
     <servers />
   </component>

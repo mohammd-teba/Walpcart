@@ -1,0 +1,18 @@
+Index: app/Http/Requests/Product/ProductRequest.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\r\n\r\nnamespace App\\Http\\Requests\\Product;\r\n\r\nuse Illuminate\\Foundation\\Http\\FormRequest;\r\n\r\nclass ProductRequest extends FormRequest\r\n{\r\n    /**\r\n     * Determine if the user is authorized to make this request.\r\n     *\r\n     * @return bool\r\n     */\r\n    public function authorize()\r\n    {\r\n        return true;\r\n    }\r\n\r\n    /**\r\n     * Get the validation rules that apply to the request.\r\n     *\r\n     * @return array\r\n     */\r\n    public function rules()\r\n    {\r\n        return [\r\n            'name' => 'required',\r\n            'description' => 'required',\r\n            'url' => 'required',\r\n            'service_id' => 'required|integer',\r\n        ];\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/Http/Requests/Product/ProductRequest.php b/app/Http/Requests/Product/ProductRequest.php
+--- a/app/Http/Requests/Product/ProductRequest.php	(revision 6407c90f7a00867625c6c065a3d1116ef634fedf)
++++ b/app/Http/Requests/Product/ProductRequest.php	(date 1608661342308)
+@@ -26,6 +26,7 @@
+         return [
+             'name' => 'required',
+             'description' => 'required',
++            'cost' => 'required|numeric',
+             'url' => 'required',
+             'service_id' => 'required|integer',
+         ];

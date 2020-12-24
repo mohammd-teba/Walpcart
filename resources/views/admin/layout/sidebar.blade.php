@@ -23,7 +23,7 @@
             {{--            @can('Show All Admins')--}}
             <li class="nav-item @if(preg_match('/admins/i',url()->current())) start active open @endif">
                 <a href="{{url(admin_admins_url())}}" class="nav-link nav-toggle">
-                    <i class="fa fa-users"></i>
+                    <i class="fa fa-user"></i>
                     <span class="title">Admins Management</span>
                     <span class="selected"></span>
                 </a>
@@ -56,7 +56,7 @@
             </li>
             <li class="nav-item @if(preg_match('/services/i',url()->current())) start active open @endif">
                 <a href="{{url(admin_services_url())}}" class="nav-link nav-toggle">
-                    <i class="fa fa-users"></i>
+                    <i class="fab fa-servicestack"></i>
                     <span class="title">Services</span>
                     <span class="selected"></span>
                 </a>
@@ -64,7 +64,7 @@
             </li>
             <li class="nav-item @if(preg_match('/products/i',url()->current())) start active open @endif">
                 <a href="{{url(admin_products_url())}}" class="nav-link nav-toggle">
-                    <i class="fa fa-users"></i>
+                    <i class="fab fa-product-hunt"></i>
                     <span class="title">Products</span>
                     <span class="selected"></span>
                 </a>

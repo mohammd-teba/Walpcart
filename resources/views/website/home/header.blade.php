@@ -1,5 +1,5 @@
 <div class="filter"></div>
-<div class="content-center" style="margin-top: 9px">
+<div class="content-center" style="margin-top: 105px">
 {{--    <div class="container">--}}
         <div class="col-md-12 ml-auto mr-auto">
             <div class="card page-carousel">
@@ -13,19 +13,19 @@
                         <div class="carousel-item active">
                             <img class="d-block img-fluid" src="{{url(assets('website'))}}/img/soroush-karimi.jpg" alt="First slide">
                             <div class="carousel-caption d-none d-md-block">
-                                <p>Somewhere</p>
+                                <p style="font-family: walpcartSTC">Somewhere</p>
                             </div>
                         </div>
                         <div class="carousel-item">
                             <img class="d-block img-fluid" src="{{url(assets('website'))}}/img/federico-beccari.jpg" alt="Second slide">
                             <div class="carousel-caption d-none d-md-block">
-                                <p>Somewhere else</p>
+                                <p style="font-family: walpcartSTC">Somewhere else</p>
                             </div>
                         </div>
                         <div class="carousel-item">
                             <img class="d-block img-fluid" src="{{url(assets('website'))}}/img/joshua-stannard.jpg" alt="Third slide">
                             <div class="carousel-caption d-none d-md-block">
-                                <p>Here it is</p>
+                                <p style="font-family: walpcartSTC">Here it is</p>
                             </div>
                         </div>
                     </div>

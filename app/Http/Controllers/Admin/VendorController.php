@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Vendor\CreateVendorRequest;
 use App\Http\Requests\Vendor\UpdateVendorRequest;
 use App\Models\Products;
+use App\Models\VendorMail;
 use App\Repositories\Eloquents\VendorEloquent;
 use Illuminate\Http\Request;
 
@@ -39,6 +40,15 @@ class VendorController extends Controller
         return view(admin_vendors_vw() . '.edit', $data , compact('products'));
     }
 
+    public function replay($id)
+    {
+        $vendor = $this->vendor->getById($id);
+        $data = [
+            'vendor' => $vendor
+        ];
+        return view(admin_vendors_vw() . '.sendMail', $data);
+    }
+
     public function anyData()
     {
         return $this->vendor->anyData();
@@ -53,6 +63,17 @@ class VendorController extends Controller
     public function update(UpdateVendorRequest $request, $id)
     {
         return $this->vendor->update($request->all(), $id);
+    }
+
+   public function storeReplay(Request $request, $id)
+    {
+        $message = new VendorMail([
+            'message' => $request->message,
+            'name' => $request->name,
+            'email' => $request->email,
+        ]);
+        $message->save();
+        return $this->vendor->storeReplay($request->all(), $id);
     }
 
     public function delete($id)

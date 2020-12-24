@@ -12,7 +12,7 @@
 <!-- Navbar -->
 @include('website.layout.nav')
 <!-- End Navbar -->
-<div class="page-header section-dark">
+<div class="page-header section-light-blue">
 {{--<div class="page-header section-dark" style="background-image: url('{{url(assets('website'))}}/img/antoine-barres.jpg')">--}}
     @include('website.home.header')
 </div>

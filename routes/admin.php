@@ -56,6 +56,7 @@ Route::group(['middleware' => 'auth:admin'], function () {
         Route::delete('product/{id}', [Admin\ProductController::class, 'delete']);
         Route::put('/product-activation', [Admin\ProductController::class, 'productActivate']);
     });
+
     Route::group(['prefix' => 'vendors'], function () {
         Route::get('/', [Admin\VendorController::class, 'index']);
         Route::get('/vendor-data', [Admin\VendorController::class, 'anyData']);
@@ -63,8 +64,17 @@ Route::group(['middleware' => 'auth:admin'], function () {
         Route::post('/vendor-create', [Admin\VendorController::class, 'store']);
         Route::get('/vendor-edit/{id}', [Admin\VendorController::class, 'edit']);
         Route::put('/vendor-edit/{id}', [Admin\VendorController::class, 'update']);
+        Route::get('/vendor-replay/{id}', [Admin\VendorController::class, 'replay']);
+        Route::post('/vendor-replay/{id}', [Admin\VendorController::class, 'storeReplay']);
         Route::delete('vendor/{id}', [Admin\VendorController::class, 'delete']);
         Route::put('/vendor-activation', [Admin\VendorController::class, 'vendorActivate']);
+    });
+
+    Route::group(['prefix' => 'mails'], function () {
+        Route::get('/', [Admin\MailToVendorController::class, 'index']);
+        Route::get('/mail-data', [Admin\MailToVendorController::class, 'anyData']);
+        Route::get('/mail-create', [Admin\MailToVendorController::class, 'create']);
+        Route::post('/mail-create', [Admin\MailToVendorController::class, 'store']);
     });
 
 

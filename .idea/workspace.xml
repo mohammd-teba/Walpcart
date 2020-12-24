@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3086e314-b9b4-42d8-ba30-73c9281c40ea" name="Default Changelist" comment="">
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at________Default_Changelist_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at________Default_Changelist_2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/resources/views/website/home/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/website/home/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/website/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/website/home/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/website/layout/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/website/layout/nav.blade.php" afterDir="false" />
+>>>>>>> 85ce8aa1959d77c995d9c981f3053ee7d3695e4e
+>>>>>>> 96f440ce4fc1bbb1db9fdd4fba2cc75e965e9dcf
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,7 +27,11 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
+<<<<<<< HEAD
+        <entry key="$PROJECT_DIR$" value="khaled_develop" />
+=======
         <entry key="$PROJECT_DIR$" value="main" />
+>>>>>>> 85ce8aa1959d77c995d9c981f3053ee7d3695e4e
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -171,11 +186,19 @@
       <option name="presentableId" value="Default" />
       <updated>1608318073414</updated>
       <workItem from="1608318077235" duration="32663000" />
+<<<<<<< HEAD
+      <workItem from="1608794564731" duration="436000" />
+=======
       <workItem from="1608727223976" duration="1265000" />
       <workItem from="1608736186965" duration="4891000" />
+<<<<<<< HEAD
       <workItem from="1608748052058" duration="13105000" />
       <workItem from="1608820610623" duration="6450000" />
       <workItem from="1608831800848" duration="839000" />
+=======
+      <workItem from="1608748052058" duration="12232000" />
+>>>>>>> 85ce8aa1959d77c995d9c981f3053ee7d3695e4e
+>>>>>>> 96f440ce4fc1bbb1db9fdd4fba2cc75e965e9dcf
     </task>
     <servers />
   </component>

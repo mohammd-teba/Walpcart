@@ -111,6 +111,7 @@ function admin_admins_vw()
 {
     return admin_vw() . '.admins';
 }
+
 function admin_subscriptions_management_url()
 {
     return 'admin/subscriptions_management';
@@ -169,7 +170,14 @@ function admin_vendors_url()
     return admin_vw() . '/vendors';
 }
 
-
+function admin_mail_url()
+{
+    return admin_vw().'/mails';
+}
+function admin_mail_vw()
+{
+    return admin_vw() . '.mailVendors';
+}
 
 function admin_roles_url()
 {

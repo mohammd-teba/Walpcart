@@ -6,4 +6,6 @@
 <link rel="stylesheet" href="{{url(assets('website'))}}/css/magnific-popup.css">
 
 <!-- MAIN CSS -->
-<link rel="stylesheet" href="{{url(assets('website'))}}/css/templatemo-style.css">/>
+<link rel="stylesheet" href="{{url(assets('website'))}}/css/templatemo-style.css">
+<link rel="stylesheet" href="{{url(assets('website'))}}/css/templatemo-style.css">
+<link rel="stylesheet" href="{{url(assets('website'))}}/css/templatemo-style.css">

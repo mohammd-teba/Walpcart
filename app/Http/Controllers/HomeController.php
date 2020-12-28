@@ -26,7 +26,7 @@ class HomeController extends Controller
     {
         $services =Service::all();
         return view(site_home_vw().'.index' , compact(
-            'services' ,
+            'services'
 
         ));
     }

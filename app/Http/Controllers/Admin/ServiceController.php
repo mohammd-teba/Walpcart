@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Service\ServiceRequest;
+use App\Models\Service;
 use App\Repositories\Eloquents\ServiceEloquent;
 use Illuminate\Http\Request;
 
@@ -18,7 +19,8 @@ class ServiceController extends Controller
 
     public function index()
     {
-        return view(admin_services_vw() . '.index');
+
+        return view(admin_services_vw() . '.index' );
     }
 
     public function create()

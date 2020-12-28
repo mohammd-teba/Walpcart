@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Models\Admin;
 use App\Http\Controllers\Controller;
+use App\Models\Service;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -32,6 +33,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+
         $admins = Admin::count();
 //        $teams = Team::get()->count();
 //        $sectors = Sector::get()->count();
@@ -40,7 +42,7 @@ class HomeController extends Controller
 
 
         return view(admin_vw() . '.home' , compact(
-            'admins'
+            'admins' ,
         ));
     }
 }
